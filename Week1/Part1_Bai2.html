@@ -7,10 +7,10 @@
 </head>
 <body>
     <script>
-        let Mmass = 78;
-        let Mheight = 1.69;
-        let Jmass = 92;
-        let Jheight = 1.95;
+        let Mmass = 95;
+        let Mheight = 1.88;
+        let Jmass = 85;
+        let Jheight = 1.76;
 
         let MBMI = Mmass / Math.pow(Mheight,2);
         let JBMI = Jmass / Math.pow(Jheight,2);
@@ -24,6 +24,14 @@
             console.log("Mark's BMI is higher than John's!");
         }else{
             console.log("John's BMI is higher than Mark's!");
+        }
+
+        // Task 2: Use a template literal to include the BMI values in the outputs. Example: "Mark's
+        // BMI (28.3) is higher than John's (23.9)!"
+        if (markHigherBMI){
+            console.log(`Mark's BMI(${MBMI}) is higher than John's(${JBMI})!`);
+        }else{
+            console.log(`John's BMI(${JBMI}) is higher than Mark's(${MBMI})!`);
         }
     </script>
 </body>
