@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Mmass = 78;
+        let Mheight = 1.69;
+        let Jmass = 92;
+        let Jheight = 1.95;
+
+        let MBMI = Mmass / Math.pow(Mheight,2);
+        let JBMI = Jmass / Math.pow(Jheight,2);
+
+        let markHigherBMI = true;
+        markHigherBMI = MBMI > JBMI;
+
+        // Task 1: Print a nice output to the console, saying who has the higher BMI. The message
+        // is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!
+        if (markHigherBMI){
+            console.log("Mark's BMI is higher than John's!");
+        }else{
+            console.log("John's BMI is higher than Mark's!");
+        }
+    </script>
+</body>
+</html>
