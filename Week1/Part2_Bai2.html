@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Steven is still building his tip calculator, using the same rules as before: Tip 15% of
+      // the bill if the bill value is between 50 and 300, and if the value is different, the tip is
+      // 20%.
+      let bill = 100;
+
+      // Your tasks:
+      // 1. Write a function 'calcTip' that takes any bill value as an input and returns
+      // the corresponding tip, calculated based on the rules above (you can check out
+      // the code from first tip calculator challenge if you need to). Use the function
+      // type you like the most. Test the function using a bill value of 100
+      function calcTip(x) {
+        return x >= 50 && x <= 300 ? 0.15 * x : 0.2 * x;
+      }
+
+      // 2. And now let's use arrays! So create an array 'bills' containing the test data
+      // below
+      let bills = [125, 555, 44];
+
+      // 3. Create an array 'tips' containing the tip value for each bill, calculated from
+      // the function you created before
+      let tips = [];
+      bills.forEach((bill) => {
+        tips.push(calcTip(bill));
+      });
+
+      tips.forEach((tip) => {
+        console.log(tip);
+      });
+
+      // 4. Bonus: Create an array 'total' containing the total values, so the bill + tip
+      let totals = [];
+      for(let i = 0; i < bills.length; i++){
+        totals.push((tips[i] + bills[i]));
+      }
+
+      // Test data: 125, 555 and 44
+      for(let i = 0; i < bills.length; i++){
+        console.log(`Total: ${totals[i]} - Bill: ${bills[i]} - Tip: ${tips[i]}`);
+      }
+    </script>
+  </body>
+</html>
