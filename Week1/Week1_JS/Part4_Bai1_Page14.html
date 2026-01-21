@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="again">Again</button>
+    <p>Score: <span id="score">10</span></p>
+    <p>SecretNumber: <span id="secretNumber">100</span></p>
+    <input type="number" id="guess" />
+    <p id="message">Chúc mừng bạn đã trả lời đúng!</p>
+
+    <script>
+      // Implement a game rest functionality, so that the player can make a new guess!
+      let score = 0;
+      let secretNumber = Math.trunc(Math.random() * 10) + 1;
+
+      let viewScore = document.getElementById("score");
+      let viewSecretNumber = document.getElementById("secretNumber");
+      let viewGuess = document.getElementById("guess");
+      let viewMessage = document.getElementById("message");
+
+      // Your tasks:
+      // 1. Select the element with the 'again' class and attach a click event handler
+      let btnAgain = document.querySelector(".again");
+      btnAgain.addEventListener("click", () => {
+        // 2. In the handler function, restore initial values of the 'score' and
+        // 'secretNumber' variables
+        score = 0;
+        secretNumber = Math.trunc(Math.random() * 10) + 1;
+
+        viewScore.textContent = score;
+        viewSecretNumber.textContent = "?";
+        // 3. Restore the initial conditions of the message, number, score and guess input
+        // fields
+        viewMessage.textContent = "";
+        viewGuess.value = "";
+
+        // 4. Also restore the original background color (#222) and number width (15rem)
+        document.body.style.backgroundColor = "#fefce8";//Đổi màu khác cho dễ đọc chữ
+      });
+    </script>
+  </body>
+</html>

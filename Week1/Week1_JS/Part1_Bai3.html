@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Đề bài: There are two gymnastics teams, Dolphins and Koalas. They compete against each
+      // other 3 times. The winner with the highest average score wins a trophy!
+      let Dolphins = [96, 108, 89];
+      let Koalas = [88, 91, 110];
+
+      // 1. Calculate the average score for each team, using the test data below
+      let tbDolphins =
+        Dolphins.reduce((sum, value) => sum + value, 0) / Dolphins.length;
+      let tbKoalas =
+        Koalas.reduce((sum, value) => sum + value, 0) / Koalas.length;
+
+      // 2. Compare the team's average scores to determine the winner of the competition,
+      // and print it to the console. Don't forget that there can be a draw, so test for that
+      // as well (draw means they have the same average score)
+      if (tbDolphins == tbKoalas) {
+        console.log("Dolphins and Koalas win");
+      } else if (tbDolphins > tbKoalas) {
+        console.log("Dolphins win.");
+      } else if (tbDolphins < tbKoalas) {
+        console.log("Koalas win.");
+      }
+
+      // 3. Bonus 1: Include a requirement for a minimum score of 100. With this rule, a
+      // team only wins if it has a higher score than the other team, and the same time a
+      // score of at least 100 points. Hint: Use a logical operator to test for minimum
+      // score, as well as multiple else-if blocks 😉
+      if (tbDolphins >= 100 && tbKoalas >= 100) {
+        if (tbDolphins == tbKoalas) {
+          console.log("Dolphins and Koalas win.");
+        } else if (tbDolphins > tbKoalas) {
+          console.log("Dolphins win.");
+        } else if (tbDolphins < tbKoalas) {
+          console.log("Koalas win.");
+        }
+      } else if (tbDolphins >= 100 && tbKoalas < 100) {
+        console.log("Dolphins win.");
+      } else if (tbDolphins < 100 && tbKoalas >= 100) {
+        console.log("Koalas win.");
+      }
+
+      // 4. Bonus 2: Minimum score also applies to a draw! So a draw only happens when
+      // both teams have the same score and both have a score greater or equal 100
+      // points. Otherwise, no team wins the trophy
+      if (tbDolphins >= 100 && tbKoalas >= 100) {
+        if (tbDolphins == tbKoalas) {
+          console.log("Dolphins and Koalas win.");
+        } else if (tbDolphins > tbKoalas) {
+          console.log("Dolphins win.");
+        } else if (tbDolphins < tbKoalas) {
+          console.log("Koalas win.");
+        }
+      } else if (tbDolphins >= 100 && tbKoalas < 100) {
+        console.log("Dolphins win.");
+      } else if (tbDolphins < 100 && tbKoalas >= 100) {
+        console.log("Koalas win.");
+      } else if(tbDolphins < 100 && tbKoalas < 100) {
+        console.log("Dolphins and Koalas loss");
+      }
+    </script>
+  </body>
+</html>
