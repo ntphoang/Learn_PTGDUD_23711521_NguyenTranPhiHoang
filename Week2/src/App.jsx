@@ -20,17 +20,42 @@ function App() {
   // );
 
   // ---------------- Buoi2_Bai2_ReactJS ----------------
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
+  // return (
+  //   <>
+  //     <div>
+  //       <p>Count: {count}</p>
+  //     </div>
+  //     <button onClick={() => setCount((count) => count + 1)}>+</button>
+  //     <button onClick={() => setCount((count) => Math.max(0, count - 1))}>
+  //       -
+  //     </button>
+  //     <button onClick={() => setCount((count) => 0)}>Restart</button>
+  //   </>
+  // );
+
+  // ---------------- Buoi3_Bai2_ReactJS ----------------
+  const [ten, setTen] = useState("");
+  const [email, setEmail] = useState("");
   return (
     <>
-      <div>
-        <p>Count: {count}</p>
-      </div>
-      <button onClick={() => setCount((count) => count + 1)}>+</button>
-      <button onClick={() => setCount((count) => Math.max(0, count - 1))}>
-        -
-      </button>
-      <button onClick={() => setCount((count) => 0)}>Restart</button>
+      <form action="">
+        <input
+          type="text"
+          placeholder="Tên"
+          onChange={(e) => setTen(e.target.value)}
+          value={ten}
+        />
+        <input
+          type="text"
+          placeholder="Email"
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
+        />
+      </form>
+      <h3>THÔNG TIN CỦA BẠN</h3>
+      <p>Tên: {ten}</p>
+      <p>Email: {email}</p>
     </>
   );
 }
