@@ -8,6 +8,9 @@ import Header from "./Bai1/Header";
 import Footer from "./Bai1/Footer";
 import StudentInfo from "./Bai1/StudentInfo";
 import StatusBadge from "./Bai4/StatusBadge";
+import TodoInput from "./Bai5/ToDoInput";
+import TodoList from "./Bai5/TodoList";
+import TodoItem from "./Bai5/TodoItem";
 
 function App() {
   // ---------------- Buoi2_Bai1_ReactJS ----------------
@@ -62,13 +65,33 @@ function App() {
   // );
 
   // ---------------- Buoi2_Bai4_ReactJS ----------------
-  const [state, setState] = useState(null);
+  // const [state, setState] = useState(null);
+  // return (
+  //   <>
+  //     <StatusBadge state={state}></StatusBadge>
+  //     <button onClick={() => setState("online")}>Online</button>
+  //     <button onClick={() => setState("offline")}>Offline</button>
+  //     <button onClick={() => setState("busy")}>Busy</button>
+  //   </>
+  // );
+
+  // ---------------- Buoi2_Bai5_ReactJS ----------------
+  const [todos, setTodos] = useState([]);
+  function addTodo(text) {
+    const newTodo = {
+      id: Date.now(),
+      text: text,
+    };
+    setTodos([...todos, newTodo]);
+  }
+  function deleteTodo(id) {
+    const newTodo = todos.filter((todo) => todo.id !== id);
+    setTodos(newTodo);
+  }
   return (
     <>
-      <StatusBadge state={state}></StatusBadge>
-      <button onClick={() => setState("online")}>Online</button>
-      <button onClick={() => setState("offline")}>Offline</button>
-      <button onClick={() => setState("busy")}>Busy</button>
+      <TodoInput addTodo={addTodo}></TodoInput>
+      <TodoList todos={todos} deleteTodo={deleteTodo}></TodoList>
     </>
   );
 }
