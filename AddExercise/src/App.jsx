@@ -5,9 +5,10 @@ import "./App.css";
 import DemoUseState from "./useState/DemoUseState";
 import DemoUseEffect from "./useEffect/DemoUseEffect";
 import DemoUseReducer from "./useReducer/DemoUseReducer";
+import DemoUseRef from "./useRef/DemoUseRef";
 
 function App() {
-  return <DemoUseReducer />;
+  return <DemoUseRef/>
 }
 
 export default App;
