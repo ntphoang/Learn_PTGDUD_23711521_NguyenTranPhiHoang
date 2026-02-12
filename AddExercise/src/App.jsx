@@ -4,9 +4,10 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import DemoUseState from "./useState/DemoUseState";
 import DemoUseEffect from "./useEffect/DemoUseEffect";
+import DemoUseReducer from "./useReducer/DemoUseReducer";
 
 function App() {
-  return <DemoUseEffect/>;
+  return <DemoUseReducer />;
 }
 
 export default App;
