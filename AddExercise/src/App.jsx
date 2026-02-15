@@ -10,7 +10,11 @@ import DemoUseMemo from "./useMemo/DemoUseMemo";
 import DemoUseCallBack from "./useCallBack/DemoUseCallBack";
 
 function App() {
-  return <DemoUseCallBack />;
+  return (
+    <>
+      <DemoUseMemo />;
+    </>
+  );
 }
 
 export default App;
