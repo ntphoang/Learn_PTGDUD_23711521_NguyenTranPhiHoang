@@ -6,9 +6,11 @@ import DemoUseState from "./useState/DemoUseState";
 import DemoUseEffect from "./useEffect/DemoUseEffect";
 import DemoUseReducer from "./useReducer/DemoUseReducer";
 import DemoUseRef from "./useRef/DemoUseRef";
+import DemoUseMemo from "./useMemo/DemoUseMemo";
+import DemoUseCallBack from "./useCallBack/DemoUseCallBack";
 
 function App() {
-  return <DemoUseRef/>
+  return <DemoUseCallBack />;
 }
 
 export default App;
