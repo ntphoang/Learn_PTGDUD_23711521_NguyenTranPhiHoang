@@ -1,0 +1,17 @@
+{
+  "todos": [
+    {
+      "title": "ád",
+      "id": "Anx2t0wdBEA"
+    },
+    {
+      "title": "Học reactjs",
+      "id": "-mfDR71882U"
+    },
+    {
+      "title": "Công việc 1",
+      "id": "05dxzmn9nWU"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
