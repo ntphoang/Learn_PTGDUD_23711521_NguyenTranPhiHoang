@@ -11,36 +11,15 @@ import ComponentA from "./Bai1/componentA";
 import ComponentB from "./Bai1/componentB";
 import Component3A from "./Bai3/Component3A";
 import Component3B from "./Bai3/Component3B";
+import TodoInput from "./Bai4/TodoInput";
+import TodoList from "./Bai4/TodoList";
 
 function App() {
-  const user = useSelector((state) => state.user);
-  const dispatch = useDispatch();
-
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-
   return (
     <div>
-      Username{" "}
-      <input type="text" onChange={(e) => setUsername(e.target.value)} />
-      Password{" "}
-      <input type="password" onChange={(e) => setPassword(e.target.value)} />
-      <button
-        onClick={() =>
-          dispatch(
-            login({
-              username: username,
-              password: password,
-            }),
-          )
-        }
-      >
-        Login
-      </button>
-      <div>
-        <Component3A></Component3A>
-        <Component3B></Component3B>
-      </div>
+      <h1>TODO APP</h1>
+      <TodoInput></TodoInput>
+      <TodoList></TodoList>
     </div>
   );
 }
