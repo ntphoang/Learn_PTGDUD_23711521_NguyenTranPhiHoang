@@ -1,0 +1,131 @@
+/* Lớp phủ đen mờ toàn màn hình */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Khung nội dung chính */
+.modal-container {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 32px 24px;
+  width: 90%;
+  max-width: 550px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Nút tắt (X) ở góc trên bên phải */
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #555;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+/* Tiêu đề chính */
+.modal-title {
+  color: #F14188; /* Màu hồng chủ đạo của Chefify */
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+
+/* Dòng mô tả nhỏ */
+.modal-subtitle {
+  color: #333333;
+  font-size: 14px;
+  margin: 0 0 24px 0;
+}
+
+/* Khu vực chứa hình ảnh */
+.modal-image-wrapper {
+  width: 100%;
+  height: 260px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.modal-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Các dấu chấm phân trang (Carousel dots) */
+.modal-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #E0E0E0;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #F14188;
+}
+
+/* Khối chứa các nút bấm */
+.modal-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Nút Next */
+.btn-next {
+  background-color: #F14188;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 0;
+  width: 80%;
+  max-width: 300px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-next:hover {
+  background-color: #d63876;
+}
+
+/* Nút Skip */
+.btn-skip {
+  background: transparent;
+  border: none;
+  color: #F14188;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-skip:hover {
+  text-decoration: underline;
+}

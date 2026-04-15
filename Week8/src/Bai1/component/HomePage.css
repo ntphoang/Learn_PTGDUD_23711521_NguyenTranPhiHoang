@@ -1,0 +1,158 @@
+/* Reset cơ bản cho trang */
+.home-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- HEADER / NAVBAR --- */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 10;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #F14188;
+  font-size: 24px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #F3F4F6;
+  border-radius: 20px;
+  padding: 10px 16px;
+  width: 300px;
+}
+
+.search-bar input {
+  border: none;
+  background: transparent;
+  outline: none;
+  margin-left: 8px;
+  width: 100%;
+  font-size: 14px;
+  color: #333;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #555555;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #F14188;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-login {
+  background-color: #FDE8F0; /* Màu hồng nhạt */
+  color: #F14188;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-subscribe {
+  background-color: #F14188; /* Màu hồng đậm */
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* --- MAIN CONTENT (NỀN SAU MODAL) --- */
+.hero-section {
+  flex: 1;
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1920&q=80'); /* Ảnh nhà bếp minh hoạ */
+  background-size: cover;
+  background-position: center;
+  padding: 60px;
+}
+
+/* Card công thức nằm bên trái */
+.recipe-card {
+  background-color: #ffffff;
+  width: 340px;
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-badge {
+  background-color: #E6A822; /* Màu vàng cam */
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.recipe-title {
+  color: #F14188;
+  font-size: 24px;
+  margin: 0 0 12px 0;
+}
+
+.recipe-desc {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.btn-view-more {
+  background-color: #F14188;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Nút trigger ẩn/hiện modal (Dùng để test) */
+.btn-trigger-modal {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  background-color: #333;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
